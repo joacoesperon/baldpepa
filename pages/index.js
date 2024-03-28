@@ -16,7 +16,7 @@ export default function Home() {
     if (typeof window.ethereum !== "undefined") {
       setHasMetamask(true);
     }
-  });
+  }, []); // Añade [] como segundo argumento
 
   async function connect() {
     if (typeof window.ethereum !== "undefined") {
@@ -189,7 +189,7 @@ export default function Home() {
     <div className={styles.container}>
       <header className={styles.header}>
         <div className={styles.logo}>
-          <img src="/baldpepa.png" alt="Logo" />
+          <Image src="/baldpepa.png" alt="Logo" width={500} height={300} />
         </div>
         <nav className={styles.nav}>
           <ul>
@@ -218,7 +218,7 @@ export default function Home() {
             <h2 >Bald Pepa Coin | Pre-Sale Price</h2>
             <p >The Most Memeable Memecoin In Existence!</p>
             <br />
-            <p >It's Time For Pepa To Take Reign </p>
+            <p >Its Time For Pepa To Take Reign </p>
             <br />
             <p >The Offer Is Valid Until April 15 </p>
             <br />
@@ -255,7 +255,7 @@ export default function Home() {
           <div className={styles.containerAbout1}>
             <p> Bald Pepa is tired of watching everyone play hot potato with the
               endless derivative ShibaCumGMElonKishuTurboAssFloki Moon
-              Inu coins. The Inu's have had their day. It's time for the most
+              Inu coins. The Inus have had their day. Its time for the most
               recognizable meme in the world to take his reign as king of the
               memes.</p>
           </div>
@@ -266,7 +266,7 @@ export default function Home() {
         {/* Container How To Buy */}
         <div id="how-to-buy-section" className={styles.containerHowToBuy}>
           <div className={styles.containerHowToBuy1}>
-            <img src="pancakeswap.png" alt="pancakeswap" />
+            <Image src="/pancakeswap.png" alt="pancakeswap" width={100} height={100} />
             <h3>Create a Wallet</h3>
             <p> Download metamask or your wallet choice from the app
               store or google play store for free,
@@ -275,7 +275,7 @@ export default function Home() {
             </p>
           </div>
           <div className={styles.containerHowToBuy2}>
-            <img src="bnb.png" alt="bnb" />
+            <Image src="/bnb.png" alt="bnb" width={100} height={100} />
             <h3>Get Some BNB</h3>
             <p>Have BNB in your wallet to switch to $BALDPEPA. if you
               dont have any BNB, you can buy directly on metamask
@@ -283,16 +283,16 @@ export default function Home() {
               and send it to your wallet </p>
           </div>
           <div className={styles.containerHowToBuy3}>
-            <img src="metamask.png" alt="metamask" />
+            <Image src="/metamask.png" alt="metamask" width={100} height={100} />
             <h3>Go to Pancakeswap</h3>
             <p> Connect to Pancakeswap. Go to pancakeswap.finance in google chrome or on the browser
               inside your Metamask app. Connect your wallet. Paste the $MINIPEPE token address into pancakeswap,
               select Minipepe, and confirm. When Metamask prompts you for a wallet signature, sign.</p>
           </div>
           <div className={styles.containerHowToBuy4}>
-            <img src="baldpepa.png" alt="baldpepa" />
+            <Image src="/baldpepa.png" alt="baldpepa" width={100} height={100} />
             <h3>Switch BNB for $BALDPEPA</h3>
-            <p> Switch BNB for $BALDPEPA. We have ZERO taxes so you don't need to worry about buying
+            <p> Switch BNB for $BALDPEPA. We have ZERO taxes so you dont need to worry about buying
               with a specific slippage, although you may need to use slippage during times of market
               volatility.</p>
           </div>
@@ -300,22 +300,22 @@ export default function Home() {
         {/* Container Meme */}
         <div id="meme-section" className={styles.containerMeme}>
           <div className={styles.containerMeme1}>
-            <img src="meme1.png" alt="meme1" />
+            <Image src="/meme1.png" alt="meme1" width={500} height={300} />
           </div>
           <div className={styles.containerMeme2}>
-            <img src="meme2.png" alt="meme2" />
+            <Image src="/meme2.png" alt="meme2" width={500} height={300} />
           </div>
           <div className={styles.containerMeme3}>
-            <img src="meme3.png" alt="meme3" />
+            <Image src="/meme3.png" alt="meme3" width={500} height={300} />
           </div>
           <div className={styles.containerMeme4}>
-            <img src="meme4.png" alt="meme4" />
+            <Image src="/meme4.png" alt="meme4" width={500} height={300} />
           </div>
           <div className={styles.containerMeme5}>
-            <img src="meme5.png" alt="meme5" />
+            <Image src="/meme5.png" alt="meme5" width={500} height={300} />
           </div>
           <div className={styles.containerMeme6}>
-            <img src="meme6.png" alt="meme6" />
+            <Image src="/meme6.png" alt="meme6" width={500} height={300} />
           </div>
         </div>
       </div>
