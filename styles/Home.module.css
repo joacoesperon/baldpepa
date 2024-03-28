@@ -1,229 +1,335 @@
-.main {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding: 6rem;
-  min-height: 100vh;
-}
-
-.description {
-  display: inherit;
-  justify-content: inherit;
-  align-items: inherit;
-  font-size: 0.85rem;
-  max-width: var(--max-width);
-  width: 100%;
-  z-index: 2;
-  font-family: var(--font-mono);
-}
-
-.description a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.description p {
-  position: relative;
-  margin: 0;
-  padding: 1rem;
-  background-color: rgba(var(--callout-rgb), 0.5);
-  border: 1px solid rgba(var(--callout-border-rgb), 0.3);
-  border-radius: var(--border-radius);
-}
-
-.code {
-  font-weight: 700;
-  font-family: var(--font-mono);
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(25%, auto));
-  max-width: var(--max-width);
-  width: 100%;
-}
-
-.card {
-  padding: 1rem 1.2rem;
-  border-radius: var(--border-radius);
-  background: rgba(var(--card-rgb), 0);
-  border: 1px solid rgba(var(--card-border-rgb), 0);
-  transition: background 200ms, border 200ms;
-}
-
-.card span {
-  display: inline-block;
-  transition: transform 200ms;
-}
-
-.card h2 {
-  font-weight: 600;
-  margin-bottom: 0.7rem;
-}
-
-.card p {
-  margin: 0;
-  opacity: 0.6;
-  font-size: 0.9rem;
-  line-height: 1.5;
-  max-width: 30ch;
-}
-
-.center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  padding: 4rem 0;
-}
-
-.center::before {
-  background: var(--secondary-glow);
-  border-radius: 50%;
-  width: 480px;
-  height: 360px;
-  margin-left: -400px;
-}
-
-.center::after {
-  background: var(--primary-glow);
-  width: 240px;
-  height: 180px;
-  z-index: -1;
-}
-
-.center::before,
-.center::after {
-  content: "";
-  left: 50%;
-  position: absolute;
-  filter: blur(45px);
-  transform: translateZ(0);
-}
-
-.logo {
-  position: relative;
-}
-/* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
-  .card:hover {
-    background: rgba(var(--card-rgb), 0.1);
-    border: 1px solid rgba(var(--card-border-rgb), 0.15);
-  }
-
-  .card:hover span {
-    transform: translateX(4px);
-  }
-}
-
-@media (prefers-reduced-motion) {
-  .card:hover span {
-    transform: none;
-  }
-}
-
-/* Mobile */
-@media (max-width: 700px) {
-  .content {
-    padding: 4rem;
-  }
-
-  .grid {
-    grid-template-columns: 1fr;
-    margin-bottom: 120px;
-    max-width: 320px;
-    text-align: center;
-  }
-
-  .card {
-    padding: 1rem 2.5rem;
-  }
-
-  .card h2 {
-    margin-bottom: 0.5rem;
-  }
-
-  .center {
-    padding: 8rem 0 6rem;
-  }
-
-  .center::before {
-    transform: none;
-    height: 300px;
-  }
-
-  .description {
-    font-size: 0.8rem;
-  }
-
-  .description a {
-    padding: 1rem;
-  }
-
-  .description p,
-  .description div {
+.container {
     display: flex;
-    justify-content: center;
-    position: fixed;
-    width: 100%;
-  }
-
-  .description p {
+    flex-direction: column;
     align-items: center;
-    inset: 0 0 auto;
-    padding: 2rem 1rem 1.4rem;
-    border-radius: 0;
+    justify-content: center;
+    background: linear-gradient(to bottom, #f87fca, #d46bbe);
+    margin: 0px;
+}
+
+
+
+.header {
+    font-family: cursive;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    background-color: #f356b7;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav li {
+    font-size: 18px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #000;
+    transition: color 0.3s ease;
+}
+
+.nav a:hover {
+    color: #4e6ed6;
+}
+
+/*
+BOTON CONNECT
+*/
+.connectButton {
+    padding: 10px 20px;
     border: none;
-    border-bottom: 1px solid rgba(var(--callout-border-rgb), 0.25);
-    background: linear-gradient(
-      to bottom,
-      rgba(var(--background-start-rgb), 1),
-      rgba(var(--callout-rgb), 0.5)
-    );
-    background-clip: padding-box;
-    backdrop-filter: blur(24px);
-  }
-
-  .description div {
-    align-items: flex-end;
-    pointer-events: none;
-    inset: auto 0 0;
-    padding: 2rem;
-    height: 200px;
-    background: linear-gradient(
-      to bottom,
-      transparent 0%,
-      rgb(var(--background-end-rgb)) 40%
-    );
-    z-index: 1;
-  }
+    background-color: #4e6ed6;
+    color: #fff;
+    cursor: pointer;
 }
 
-/* Tablet and Smaller Desktop */
-@media (min-width: 701px) and (max-width: 1120px) {
-  .grid {
-    grid-template-columns: repeat(2, 50%);
-  }
+.connectButton:hover {
+    background-color: #244dd6;
 }
 
-@media (prefers-color-scheme: dark) {
-  .vercelLogo {
-    filter: invert(1);
-  }
-
-  .logo {
-    filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
-  }
+/*CONTAINER GENERAL*/
+.containerGeneral {
+    width: 100%;
+    border: 0px solid #4e6ed6;
+    border-radius: 15px;
 }
 
-@keyframes rotate {
-  from {
-    transform: rotate(360deg);
-  }
-  to {
-    transform: rotate(0deg);
-  }
+/*
+CONTAINER HOME  
+*/
+.containerHome {
+    display: flex;
+    flex-direction: row;
+    /* Cambiamos de column a row */
+    border: 0px solid #4e6ed6;
+    border-radius: 15px;
+    padding: 0px;
+    padding-top: 150px;
+    margin: 0px;
+    /* Restamos el margen izquierdo y derecho */
+    width: 100%;
+}
+
+.containerHome1,
+.containerHome2 {
+    margin: 50px;
+    flex: 1;
+    padding: 10px;
+    font-family: cursive;
+    color: white;
+    /* Añadimos un borde derecho a containerHome1 */
+    border: 0px solid #4e6ed6;
+    border-radius: 15px;
+    font-size: 28px;
+    text-align: center;
+}
+
+/*
+CONTAINER HOME 1
+*/
+.containerHome1 h2 {
+    font-size: 40px;
+}
+
+/*
+CONTAINER HOME 2
+*/
+.containerHome2 h2 {
+    text-align: center;
+    font-size: 40px;
+    color: white;
+    border-bottom: 5px solid #4e6ed6;
+    /* Cambia el color y el grosor del borde según sea necesario */
+    padding-bottom: 10px;
+    /* Ajusta el espaciado inferior del título */
+    width: 100%;
+    /* Hace que el borde inferior ocupe todo el ancho del contenedor */
+    box-sizing: border-box;
+    /* Incluye el borde en el ancho total */
+}
+
+/*
+BARRA PROGRESO
+*/
+.containerHome2 .progress {
+    height: 20px;
+    margin: 10px;
+    background-color: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.containerHome2 .progress .progressBar {
+    height: 100%;
+    background-color: #2750d4;
+    width: 0;
+    /* Este valor se actualizará dinámicamente */
+}
+
+.containerHome2 .progress p {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.containerHome2 p span {
+    font-weight: bold;
+}
+
+/*
+IMPUT TEXT
+*/
+.inputBNB {
+    display: flex;
+    flex-direction: row;
+}
+
+.inputcontainer {
+    position: relative;
+    display: inline-block;
+    color: #4e6ed6;
+}
+
+.currency {
+    position: flex;
+    color: white;
+    /* Puedes ajustar el color según el diseño */
+}
+
+.inputField {
+    padding: 10px;
+    background-color: #4e6ed6;
+    color: white;
+    border: 2px solid #4e6ed6;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.inputField::after {
+    content: " BNB";
+    /* Agrega el texto " BNB" después del input field */
+    color: white;
+    /* Color del texto */
+    font-size: 20px;
+    /* Tamaño de fuente */
+    position: absolute;
+    /* Establece la posición absoluta */
+    /* Posiciona el texto en la mitad vertical */
+    transform: translateY(-50%);
+    /* Alinea verticalmente el texto */
+    right: 10px;
+    /* Ajusta el espaciado derecho según sea necesario */
+}
+
+/*
+EXECUTE BUTTON
+*/
+.containerHome2 .executeButton {
+    /* Ocupa todo el ancho menos los márgenes */
+    width: calc(100% - 40px);
+    /* Márgenes pequeños */
+    margin: 20px;
+    /* Fondo rojo */
+    background-color: #4e6ed6;
+    /* Texto blanco */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.executeButton:hover {
+    background-color: #244dd6;
+}
+
+/*
+ABOUT CONTAINER
+*/
+.containerAbout {
+    display: flex;
+    flex-direction: row;
+    /* Cambiamos de column a row */
+    border: 0px solid #4e6ed6;
+    border-radius: 15px;
+    padding: 150px;
+    margin: 0px;
+    /* Restamos el margen izquierdo y derecho */
+    width: 100%;
+}
+
+.containerAbout1,
+.containerAbout2 {
+    margin: 50px;
+    flex: 1;
+    padding: 10px;
+    font-family: cursive;
+    color: white;
+    /* Añadimos un borde derecho a containerHome1 */
+    border: 0px solid #4e6ed6;
+    border-radius: 15px;
+    line-height: 4;
+    font-size: 28px;
+    text-align: center;
+}
+
+.containerAbout2 img {
+    width: 600px;
+}
+
+/*
+CONTAINER HOW TO BUY
+*/
+.containerHowToBuy {
+    display: flex;
+    flex-direction: row;
+    /* Cambiamos de column a row */
+    border: 0px solid #4e6ed6;
+    border-radius: 15px;
+    padding: 20px;
+    padding-top: 100px;
+    margin: 0px;
+    /* Restamos el margen izquierdo y derecho */
+    width: 100%;
+}
+
+.containerHowToBuy1,
+.containerHowToBuy2,
+.containerHowToBuy3,
+.containerHowToBuy4 {
+    margin: 0px 0px 0px 0px;
+    flex: 1;
+    padding: 30px;
+    font-family: cursive;
+    color: white;
+    /* Añadimos un borde derecho a containerHome1 */
+    border: 0px solid #4e6ed6;
+    border-radius: 15px;
+    font-size: 28px;
+    text-align: center;
+}
+
+.containerHowToBuy1 img,
+.containerHowToBuy2 img,
+.containerHowToBuy3 img,
+.containerHowToBuy4 img {
+    width: 80px;
+}
+
+/*
+CONTAINER MEME
+*/
+.containerMeme {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* Tres columnas de igual tamaño */
+    grid-template-rows: auto auto;
+    /* Dos filas automáticas */
+    gap: 20px;
+    /* Espacio entre las filas y columnas */
+    border: 0px solid #4e6ed6;
+    border-radius: 15px;
+    padding: 20px;
+    padding-top: 200px;
+    margin: 20px 0;
+    /* Margen superior e inferior */
+}
+
+.containerMeme1,
+.containerMeme2,
+.containerMeme3,
+.containerMeme4,
+.containerMeme5,
+.containerMeme6 {
+    flex-basis: calc(33.33% - 20px);
+    /* Establece el tamaño base de cada subcontenedor */
+    /* Resta 20px para tener en cuenta el espacio entre los elementos */
+    margin-bottom: 20px;
+    /* Espacio entre las filas */
+    box-sizing: border-box;
+    /* Incluye el padding y el borde en el ancho total */
+}
+
+
+.containerMeme1 img,
+.containerMeme2 img,
+.containerMeme3 img,
+.containerMeme4 img,
+.containerMeme5 img,
+.containerMeme6 img {
+    width: 280px;
 }
