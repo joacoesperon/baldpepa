@@ -21,13 +21,22 @@ export default function Home() {
   async function connect() {
     if (typeof window.ethereum !== "undefined") {
       try {
-        await ethereum.request({ method: "eth_requestAccounts" });
-        setIsConnected(true);
-        const provider = new ethers.providers.Web3Provider(window.ethereum);
-        const signer = provider.getSigner();
+        // Solicita al usuario que conecte su billetera
+        await window.ethereum.request({ method: "eth_requestAccounts" });
+        // Crea un proveedor Ethers.js a partir de la conexión de MetaMask
+        const provider = new ethers.BrowserProvider(window.ethereum);
+        //console.log("Web3Provider instance created successfully.");
+        // Obtiene el signer (que representa la cuenta del usuario)
+        const signer = await provider.getSigner();
         setSigner(signer);
+        //console.log("Usuario conseguido.");
+        // Obtiene la dirección de la cuenta del usuario
         const address = await signer.getAddress();
         setSignerAddress(address);
+        //console.log("Dirrecion conseguida.");
+        //conectado
+        setIsConnected(true);
+        //console.log("Realizo toda la funcion")
       } catch (e) {
         console.log(e);
       }
@@ -36,7 +45,7 @@ export default function Home() {
     }
   }
 
-  const toWei = ether => ethers.utils.parseEther(ether);
+  const toWei = ether => ethers.parseEther(ether);
 
   async function execute() {
     if (typeof window.ethereum !== "undefined") {
@@ -189,7 +198,7 @@ export default function Home() {
     <div className={styles.container}>
       <header className={styles.header}>
         <div className={styles.logo}>
-          <Image src="/baldpepa.png" alt="Logo" width={500} height={300} />
+          <Image src="/baldpepa.png" alt="Logo" width={100} height={100} />
         </div>
         <nav className={styles.nav}>
           <ul>
