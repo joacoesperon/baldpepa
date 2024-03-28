@@ -199,6 +199,10 @@ IMPUT TEXT
 /*
 EXECUTE BUTTON
 */
+.buttonContainer {
+    color: white;
+}
+
 .containerHome2 .executeButton {
     /* Ocupa todo el ancho menos los márgenes */
     width: calc(100% - 40px);
